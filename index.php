@@ -1,13 +1,213 @@
+<?php
+
+    require "includes/dados.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>GetNinjas - Site de contratação de serviços online</title>
+    <title>D+ Serviços | Site de contratação de serviços online</title>
 </head>
 <body>
+    <!--=============== CABEÇALHO ===============-->
+    <header id="cabecalho">
+        <section id="logo">
+            <a href="index.php">
+                <img src="assets/img/dServicosAzulPreto.png" alt="D+ SERVIÇOS">
+            </a>
+        </section>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#" target="_self" rel="author">Como funciona</a></li>
+                <li><a href="#" target="_self" rel="author" class="btn__header">Seja um profissional</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="principal">
+    <!--=============== HOME ===============-->
+        <section id="d__servicos">
+            <article class="d__servicos__info">
+                <h1>Simplifique sua busca por serviços. Contrate com facilidade e eficiência!</h1>
+                <p>O poder da escolha está em suas mãos.</p>
+                <a href="#"><button class="button">Saiba mais</button></a>
+            </article>
+
+            <article class="d__servicos_img">
+                <img src="assets/img/trabalhador4.png" alt="Trabalhadores da D+Serviços">
+            </article>
+        </section>
+
+        <!--=============== SERVIÇOS ===============-->
+        <section id="categorias">
+            <article class="limpeza">
+                <img src="assets/img/limpezas.svg" alt="Limpezas">
+                <p>Serviços Domésticos</p>
+            </article>
+            <article class="reformas">
+                <img src="assets/img/reformas.svg" alt="Reformas">
+                <p>Reformas e Reparos</p>
+            </article>
+            <article class="mecanica">
+                <img src="assets/img/mecanica.svg" alt="Mecânica">
+                <p>Mecânica</p>
+            </article>
+            <article class="eventos">
+                <img src="assets/img/eventos.svg" alt="Eventos">
+                <p>Eventos</p>
+            </article>
+            <article class="tecnologias">
+                <img src="assets/img/tecnologias.svg" alt="Tecnologias">
+                <p>Tecnologias</p>
+            </article>
+            <article class="aulas">
+                <img src="assets/img/aulas.svg" alt="Aulas">
+                <p>Aulas</p>
+            </article>
+            <article class="saude">
+                <img src="assets/img/saude.svg" alt="Saúde">
+                <p>Saúde</p>
+            </article>
+            <article class="beleza">
+                <img src="assets/img/beleza.svg" alt="Beleza">
+                <p>Beleza</p>
+            </article>
+        </section>
+
+        <!--=============== BARRA DE PESQUISA ===============-->
+        <section id="input__pesquisar">
+            <article class="busca">
+                <img src="assets/img/pesquisar.svg" alt="Buscar..."/>
+                <input type="search" class="txtBusca" placeholder="Digite aqui sua pesquisa"/>
+                <button class="btnBusca" onclick="pesquisar()">Buscar</button>
+            </article>
+        </section>
+
+        <!--=============== PRINCIPAIS SERVIÇOS - CARDS ===============-->
+        <section id="servicos">
+            <h2>Principais serviços pedidos</h2>
+            <p>Os serviços mais realizados de cada categoria</p>
+
+            <section class="cards__container">
+                <?php 
+                        foreach($cardsInfo as $i => $f) { ?>
+                            <article class="servicos__cards">
+                                <div class="card">
+                                    <div class="imagem-container">
+                                        <img src="<?=$f["img"]?>" alt="Eletricista"></div>
+                                    <div class="servicos__txt">
+                                        <p><?=$f["servico"]?></p>
+                                        <a href="<?=$f["pagina"]?>"><button class="button btn__card">Solicitar orçamento</button></a>
+                                    </div>
+                                </div>
+                            </article>
+                    <?php 
+                        } 
+                    ?>
+            </section>
+
+        <!--=============== O QUE É A D+SERVIÇOS ===============-->
+        <section id="about" class="scrollReveal">
+            <h2>O que é a D+Serviços?</h2>
+            <p>D+Serviços é a maior plataforma de contratação de serviços do Brasil. Conectamos Profissionais de todo o Brasil com pessoas solicitando serviço, atendendo com qualidade, facilidade e rapidez todos os tipos de necessidade.</p>
+
+            <article class="cards__about scrollReveal">
+                <div class="card__about__info">
+                    <img src="assets/img/clique.svg" alt="Clique">
+                    <h3>Faça o seu pedido</h3>
+                    <p>Fale o que você precisa. É rápido e de graça!</p>
+                </div>
+
+                <div class="card__about__info">
+                    <img src="assets/img/card_trabalhador.svg" alt="Trabalhador">
+                    <h3>Receba até quatro orçamentos</h3>
+                    <p>Profissionais avaliados entram em contato com você em instantes!</p>
+                </div>
+
+                <div class="card__about__info">
+                    <img src="assets/img/like.svg" alt="Like">
+                    <h3>Escolha o melhor</h3>
+                    <p>Negocie direto com eles. Fácil como nunca foi antes!</p>
+                </div>
+            </article>
+        </section>
+    </main>
     
+    <!--=============== FOOTER ===============-->
+    <footer>
+        <section class="footer">
+            <div class="footer__col">
+                <img src="assets/img/dMaisServicosSemEspaco.png" alt="">
+                <p>Simplifique sua busca por serviços. <br> Contrate com facilidade e eficiência! <br> O poder da escolha está em suas mãos.</p>
+                <div class="logos__redes">
+                    <a href="#" target="_blank" class="footer__social">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Sobre</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Nossa equipe</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Empresa</h3>
+                <ul class="footer__list">
+                    <li><a href="#">História</a></li>
+                    <li><a href="#">Valores</a></li>
+                    <li><a href="#">Responsabilidade social</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Suporte</h3>
+                <ul class="footer__list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="footer__rights">
+            <p class="footer__copy">&#169; 2023 D+Serviços. Todos os direitos reservados.</p>
+            <div class="footer__terms">
+                <a href="#" class="footer__terms-link">Termos & Acordos</a>
+                <a href="#" class="footer__terms-link">Política de privacidade</a>
+            </div>
+        </div>
+    </footer>      
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script src="assets/js/search.js"></script>
 </body>
 </html>
