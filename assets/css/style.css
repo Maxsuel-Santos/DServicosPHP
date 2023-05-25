@@ -343,3 +343,162 @@ main {
 .imagem-container:hover img {
     transform: scale(103%);
 }
+
+footer {
+    background-color: var(--cor_azul_escuro_final);
+    overflow: hidden;
+}
+
+.footer {
+    color: var(--cor_branco);
+    padding: 6rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer p {
+    line-height: 2.5rem;
+}
+  
+.footer__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+}
+  
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.footer__list li {
+    margin-bottom: 1.5rem;
+}
+  
+.footer__list a {
+    color: var(--cor_branco);
+    font-weight: 300;
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+.footer__list a:hover {
+    color: var(--cor_azul_claro);
+}  
+  
+.footer__rights {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+.footer__copy {
+    color: var(--cor_branco);
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.footer__terms-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--cor_branco);
+    margin: 0 2rem;
+    transition: color 0.3s;
+}
+
+.footer__terms-link:hover {
+    color: var(--cor_azul_claro);
+} 
+
+.logos__redes {
+    margin-top: 1rem;
+}
+
+.footer__social {
+    margin: 2rem 1.4rem 0 0;
+    color: var(--cor_azul_claro);
+    transition: color .2s ease-in;
+}
+
+.footer__social:hover {
+    color: var(--cor_branco);
+}
+
+.scrollup {
+    position: fixed;
+    right: 1.8rem;
+    bottom: -30%;
+    background-color: var(--cor_azul_medio);
+    padding: 1rem;
+    display: flex;
+    opacity: .9;
+    z-index: 10;
+    transition: .4s;
+}
+  
+.scrollup:hover {
+    background-color: var(--cor_azul_escuro);
+    opacity: 1;
+}
+  
+.scrollup__icon {
+    color: var(--cor_branco);
+    font-size: 1.6rem;
+}
+  
+.show-scroll {
+    bottom: 7.4rem;
+}
+
+#about {
+    margin: 10rem 0;
+}
+
+#about > p, h2 {
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2.7rem;
+}
+
+#about > p {
+    font-size: 2.4rem;
+    color: var(--cor_cinza);
+    padding: 0 10rem;
+}
+
+.cards__about {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 7rem 0;
+    padding: 2rem;
+}
+
+.card__about__info img {
+    margin-bottom: 2rem;
+    opacity: .8;
+}
+
+.card__about__info img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card__about__info h3 { 
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+.card__about__info p {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    color: var(--cor_cinza);
+}
+
+/* ===================== ELETRICISTA ===================== */
