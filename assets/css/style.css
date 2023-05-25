@@ -92,3 +92,254 @@ header {
 main {
     overflow: hidden !important;
 }
+
+#d__servicos {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.d__servicos__info {
+    width: 50vw;
+    margin-top: 3rem;
+    padding: .7rem;
+}
+
+.d__servicos__info h1 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    line-height: 5rem;
+}
+
+.d__servicos__info p {
+    font-size: 2.7rem;
+    font-weight: 500;
+    line-height: 3.7rem;
+    color: var(--cor_cinza);
+}
+
+.button {
+    color: var(--cor_azul_claro);
+    padding: 0.8em 1.7em;
+    margin: 1.5rem 0;
+    background-color: transparent;
+    border-radius: .8rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 2rem;
+    border: 2px solid;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+}
+   
+.button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--cor_azul_claro);
+    transition: 1s ease;
+}
+   
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+   
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+   
+.button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+   
+.button:hover {
+    color: var(--cor_branco);
+    border: 2px solid var(--cor_azul_claro);
+}
+   
+.button:active {
+    filter: brightness(.8);
+}
+
+.d__servicos_img {
+    width: 40vw;
+    background: var(--cor_laranja_claro);
+    border-radius: 3px 3px 3px 20.8rem;
+    box-shadow: 2px 2px 8px var(--cor_preto_sombra);
+}
+
+.d__servicos_img img {
+    float: right;
+    margin-right: 2rem;
+    filter: drop-shadow(2px 2px 8px var(--cor_preto_sombra));    
+}
+
+#categorias {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 5rem;
+    margin: 5rem 0;
+    text-align: center;
+}
+
+#categorias article img {
+    width: 65%;
+    height: 65%;
+}
+
+#categorias article:hover {
+    cursor: pointer;
+    transform: scale(103%);
+}
+
+#input__pesquisar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0;
+}
+
+#input__pesquisar > .busca input:focus {
+    border: none;
+    outline: none;
+}
+
+.busca{
+    background-color: var(--cor_branco);
+    border: solid 2px var(--cor_cinza);
+    border-radius: .8rem;
+    width: 75vw;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+.txtBusca{
+    float: left;
+    background-color: transparent;
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    border: none;
+    height: 5rem;
+    width: 60vw;
+}
+  
+.btnBusca{
+    border: none;
+    float: right;
+    height: 5.5rem;
+    width: 11rem;
+    border-radius: .8rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background: var(--cor_azul_claro);
+    color: var(--cor_branco);
+}
+  
+.btnBusca:hover {
+    cursor: pointer;
+    background-color: var(--cor_azul_medio);
+    transition: .35s ease-in-out;
+}
+
+.busca img{
+    float: left;
+}
+
+#servicos {
+    margin: 0 0 15rem 0;
+}
+
+#servicos h2 {
+    margin: 10rem 0 0 0;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+#servicos > p {
+    color: var(--cor_cinza);
+    font-size: 2.6rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.cards__container {
+    display: flex;
+    margin: 0 auto;
+    width: 79vw;
+    overflow-x: scroll;
+}
+
+.cards__container::-webkit-scrollbar {
+    height: .7rem;
+    background-color: var(--cor_branco);
+}
+
+.cards__container::-webkit-scrollbar-thumb {
+    background-color: var(--cor_azul_claro);
+    border-radius: 40px;
+}
+
+.cards__container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--cor_azul_medio);
+}
+
+.cards__container::-webkit-scrollbar-track {
+    background-color: var(--cor_laranja_claro);
+}
+
+.servicos__cards {
+    box-shadow: 0px 8px 16px var(--cor_preto_sombra), inset 0px 4px 4px var(--cor_preto_sombra);
+    backdrop-filter: blur(2px);
+    border-radius: 1.2rem;
+    width: 100%;
+    margin: 6rem 2rem;
+}
+
+.card {
+    text-align: center;
+    position: relative;
+}
+
+.servicos__txt {
+    margin: 2rem 0;
+}
+
+.servicos__txt p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--cor_cinza);
+}
+
+.btn__card {
+    width: 85%;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 3rem 0;
+}
+
+.imagem-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.imagem-container img {
+    object-fit: cover; 
+    transition: 0.3s ease;
+}
+
+.imagem-container:hover img {
+    transform: scale(103%);
+}
