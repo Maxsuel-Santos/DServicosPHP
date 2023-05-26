@@ -15,7 +15,7 @@ Site de contratação de serviços online.
 | CSS        | Linguagem de estilo utilizada para estilizar a apresentação do conteúdo em páginas web. Permite controlar o layout, cores, fontes e outros aspectos visuais de um site. |
 | JavaScript | Linguagem de programação client-side que adiciona interatividade e dinamismo às páginas web. É amplamente suportada pelos navegadores e permite a criação de recursos interativos, como animações, validação de formulários e manipulação do DOM. |
 
-## Estrutura do Projeto
+## Estrutura do Projeto 🧬
 
 O projeto está organizado da seguinte forma:
 
@@ -52,6 +52,6 @@ Para executar o projeto localmente, siga as etapas abaixo:
 
 Dessa forma, você poderá executar o projeto PHP localmente usando o XAMPP e acessá-lo através do endereço `http://localhost` seguido pelo nome da pasta do projeto.
 
-## Licença
+## Licença 🔐
 
 Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
