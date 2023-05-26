@@ -606,3 +606,155 @@ footer {
 #avaliacao h2{
     font-weight: 500;
 }
+
+.clientes{
+    background-color: var(--cor_branco);
+    width: 90%;
+    border-radius: 0.5rem;
+    margin: 4.645rem 2rem;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    box-shadow: 0px 4px 10px var(--cor_preto_sombra);
+}
+
+.clientes p{
+    color: var(--cor_cinza_escuro);
+    padding: 8px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.clientes h5{
+    text-align: left;
+    color: var(--cor_preto);
+    padding: 9.5px 15px 0 15px;
+    font-size: 16px;
+}
+
+.clientes h6{
+    text-align: left;
+    color: var(--cor_preto);
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+#media{
+    text-align: center;
+    background-color: var(--cor_branco);
+    width: 90%;
+    border-radius: 0.5rem;
+    margin: 5.5rem 2rem;
+    color: var(--cor_preto);
+    padding: 18px;
+    box-shadow: 0px 4px 10px var(--cor_preto_sombra);
+}
+
+#media h4{
+    font-size: 20px;
+}
+
+.estrelas{
+    position: static;
+    width: 24px;
+    padding: 8px 0;
+}
+
+#estrela_partida{
+    position: static;
+    width: 17.5px;
+    padding: 8px 0;
+}
+
+.estrelas_clientes{
+    position:relative;
+    width: 24px;
+    padding-bottom: 8px;
+    right: 117px;
+}
+
+.estrelas_clientes_4{
+    position:relative;
+    width: 24px;
+    padding-bottom: 8px;
+    right: 128px;
+}
+
+#cadastrar{
+    text-align: center;
+    margin-top: -18px;
+}
+
+.d__servicos2 {
+    margin: 8rem 0;
+}
+.cards__container2 {
+    display: flex;
+    margin: 0 auto;
+    width: 79vw;
+}
+
+.orcamento{
+    box-shadow: 0px 5px 15px var(--cor_preto_sombra);
+    backdrop-filter: blur(2px);
+    border-radius: 1.2rem ;
+    width: 100%;
+    margin: 6rem 2rem;
+}
+
+.orcamento:hover {
+    box-shadow: 0px 7px 25px var(--cor_preto_sombra);
+    cursor: pointer;
+}
+
+.orcamento_text{
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.orcamento_text h5{
+    color: var(--cor_verde_escuro);
+    padding: 18px 0px 4px 20px;
+}
+
+.orcamento_text h3{
+    color: var(--cor_preto);
+    font-size: 3rem;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.orcamento_servico{
+    color: var(--cor_cinza_escuro);
+    font-weight: 500;
+    padding: 4px 0px 16px 20px;
+    font-size: 20px;
+}
+
+.barra{
+    color: var(--cor_cinza_claro);
+    height: -2px;
+}
+
+.preco{
+    color: var(--cor_cinza_escuro);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.valor{
+    text-align: justify;
+}
+
+.menor__maior__custo {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2.6rem;
+}
+
+.menor__maior__custo > .preco, .valor {
+    color: var(--cor_preto);
+}
+
+.menor__maior__custo p {
+    font-size: 2.2rem;
+    margin-bottom: .5rem;
+}
